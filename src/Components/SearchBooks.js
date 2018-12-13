@@ -74,7 +74,7 @@ class SearchBooks extends Component {
         <div className='search-books-results'>
           <ol className='books-grid'>
           {this.state.query && 
-            this.state.books.map((book) => (<Book bookShelfHandler={this.props.bookShelfHandler} book={book} key={book.id} onUpdate={(shelf) => (this.addBook(book, shelf))}/>))}
+            this.state.books.map((book) => (<Book bookShelfHandler={this.props.onBookUpdate} book={book} key={book.id} onUpdate={(shelf) => (this.addBook(book, shelf))}/>))}
           {
             this.state.error && <NotFound />
           }
