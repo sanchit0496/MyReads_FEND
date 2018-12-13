@@ -45,7 +45,7 @@ class SearchBooks extends Component {
         .then((books) => {
           if (books.length) {
             books = books.filter((book) => (book.imageLinks))
-            // books = this.changeBookShelf(books)
+            books = this.changeBookShelf(books)
             this.setState({ books, error: '' })
           } else {
             this.setState({ books: [], error: 'error' })
